@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>ANG Validate Jquery Plugin</title>
+  
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="angvalidate-1.0.min.js" type="text/javascript"></script>
+  <link rel="Stylesheet" type="text/css" href="angvalidate.css" />
+  
+  <script type="text/javascript">
+  $(document).ready(function(){
+  
+  $('.required').angvalidate(); 
+  
+  });  
+  
+  </script>
+  
+  
+<style>
+.body{line-height:20px;}
+</style>
+  
+</head>
+<body>
+  <div class="main">
+  <h1>ANG Validate Jquery Plugin</h1>
+  <hr>
+  
+  <form method="POST" enctype="multipart/form-data" action="" >
+  
+  
+  <table>
+  
+  <tr>
+  <td align="left" colspan="2" height="10">
+  <h3>Examples to use plugin :=></h3>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Text Input</td>
+  <td> 
+      <input  type="text" name="sample_text" class="required" >
+  </td>
+  </tr>
+  
+   <tr>
+  <td>Numeric Input</td>
+  <td> 
+      <input  type="text" name="sample_text2" class="required" ang-options="numeric:true" >
+  </td>
+  </tr>
+  
+   <tr>
+  <td>Alphanumeric Input</td>
+  <td> 
+      <input  type="text" name="sample_text" class="required" ang-options="alphanum:1" >
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Alphabatic Input</td>
+  <td> 
+      <input  type="text" name="sample_text" class="required" ang-options="alpha:true" >
+  </td>
+  </tr>
+  
+  
+  <tr>
+  <td>Without Special Characters</td>
+  <td> 
+      <input  type="text" name="sample_text" class="required" ang-options="special-chars:true" >
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Email</td>
+  <td> 
+      <input  type="text" name="sample_text" class="required" ang-options="email:true" >
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Url</td>
+  <td> 
+      <input  type="text" name="sample_text" class="required"  ang-options="url:true">
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Match value</td>
+  <td> 
+      <input  type="text" name="sample_text" class="required"id="fld1" >
+      <input  type="text" name="sample_text" class="required" ang-options="match-id:fld1">
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Length Check </td>
+  <td> 
+      <input  type="text" name="sample_text" value="minimum 4" class="required" ang-options="min-length:4">
+      <input  type="text" name="sample_text" value="maximum 12" class="required" ang-options="max-length:12">
+  </td>
+  </tr>
+  
+ <tr>
+ <td>Select Box</td>
+ <td> 
+ 
+ <select name="select_box" class="required"  ang-options="display-id:select_error">
+ <option value="">Select</option>
+ <option value="1">Option 1</option>
+ <option value="2">Option 2</option>
+ </select>
+ 
+ <span id="select_error"></span>
+ 
+  </td>
+  </tr>
+  
+  <tr>
+ <td>Select Multiple</td>
+ <td> 
+ 
+ <select name="select_box" multiple class="required" ang-options="display-id:select_error2">
+ <option value="1">Option 1</option>
+ <option value="2">Option 2</option>
+ <option value="2">Option 3</option>
+ </select>
+ 
+ <span id="select_error2"></span>
+ 
+  </td>
+  </tr>
+  
+  <tr>
+  <td>File Input</td>
+  <td> 
+ <input  type="file" name="sample_file" class="required" 
+ ang-options="display-id:valid_file;allowed-ext:jpg,png;allowed-size:29000;msg:Please Select File;msg-ext:Please Select jpg or png File;msg-size:file size exceed">
+ <span id="valid_file"></span>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Radio Input</td>
+  <td> 
+ <input  type="radio" name="sample_radio" value="v1" class="required" ang-options="display-id:valid_radio">
+  Option 1
+ <input  type="radio" name="sample_radio" value="v2" >
+  Option 1
+ <span id="valid_radio"></span>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>Checkbox Input</td>
+  <td> 
+
+<input  type="checkbox" name="sample_check1" value="v1" class="required" ang-options="display-id:check1_msg">
+Option 1
+<span id="check1_msg"></span>
+   
+<input  type="checkbox" name="sample_check2" value="v2" class="required" ang-options="display-id:check2_msg;">
+Option 2
+<span id="check2_msg"></span>
+ 
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="left" colspan="2" height="10">&nbsp;
+  
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="left" colspan="2"> 
+   <input type="submit"  value="submit"/>
+  </td>
+  </tr>
+  
+  </table>
+  </form>
+  
+ <hr> 
+<div>
+<h3> How to Use :=> </h3>
+<p>
+<h5>include required files in head tag :=></h5>
+<code>
+&#x3C;script src=&#x22;http://code.jquery.com/jquery-1.11.2.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+<br>
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;angvalidate-1.0.min.js&#x22; &#x3E;&#x3C;/script&#x3E;
+<br>
+&#x3C;link rel=&#x22;Stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;angvalidate.css&#x22; /&#x3E;
+
+</code>
+
+</p>
+
+<p>
+<h5>initiate plugin using following code :=></h5>
+<code>
+&#x3C;script type=&#x22;text/javascript&#x22;&#x3E;
+  <br> $(document).ready(function(){  <br>   <br> 
+  
+  $(&#x27;.required&#x27;).angvalidate();   <br>   <br> 
+  
+  });    <br> 
+  &#x3C;/script&#x3E;
+</code>
+<h5 style="color:#f00;">Note: Here ".required" is the element selector you can use your own</h5>
+</p>
+
+<p>
+<h5>use html code as below :=></h5>
+<code>
+&#x3C;input  type=&#x22;text&#x22; name=&#x22;sample_text&#x22; class=&#x22;required&#x22;  &#x3E;
+
+</code>
+
+</p>
+
+<hr>
+<p>
+<h3>Initialise plugin with custom options :=></h3>
+<code>
+ $(&#x27;.required&#x27;).angvalidate({
+        <br><br>error_message        :&#x27;This field is required.&#x27;,      //default error message
+&#x9;&#x9;<br><br>error_message_ext    :&#x27;File type is not valid.&#x27;,      //default file type error message
+&#x9;&#x9;<br><br>error_message_size   :&#x27;File size is not accepted.&#x27;,   //default file size error message
+&#x9;&#x9;<br><br>error_msg_class      :&#x27;error_msg&#x27;,                    //default error message class
+&#x9;&#x9;<br><br>error_input_class    :&#x27;error_input&#x27;,                  //default error input class
+&#x9;&#x9;<br><br>success_input_class  :&#x27;success_input&#x27;,                //default success input class
+&#x9;&#x9;<br><br>allowed_max_size     :1000,                           //default maximum file size in KB
+&#x9;&#x9;<br><br>allowed_extesnsions  :&#x22;jpg,png&#x22;                       //default allowed file extensions
+  <br><br>}); 
+
+</code>
+</p>
+
+<hr>
+<p>
+<h3>Custom Options :=></h3>
+<ul>
+<li><strong>display-id : </strong> Id of element where error message to be displayed.</li>
+<li><strong>msg : </strong> Message to be displayed when error. </li>
+<li><strong>allowed-size : </strong> Maximum file size to be uploaded in KB for input type file. </li>
+<li><strong>allowed-ext : </strong> Comma Separated value of allowed extensions for input type file. </li>
+<li><strong>msg-size  : </strong> Message to be displayed when size exceeded for input type file. </li>
+<li><strong>msg-valid  : </strong> Message to be displayed when value of input field is not valid.</li>
+<li><strong>numeric : </strong>Value true or 1 . To take only numeric input.</li>
+<li><strong>alphanum : </strong>Value true or 1 . To take only alpha numeric input.</li>
+<li><strong>alpha : </strong>Value true or 1 . To take only alphabatic input.</li>
+<li><strong>special-chars : </strong>Value true or 1 . To not accept special characters as input.</li>
+<li><strong>url : </strong>Value true or 1 .  Not accept input if not a valid url. </li>
+<li><strong>email : </strong>Value true or 1 . Not accept input if not a valid email address.</li>
+<li><strong>match-id : </strong> Match value of current input whith other input having id as defined. </li>
+<li><strong>min-length : </strong> Check for minimum length. </li>
+<li><strong>max-length : </strong> Check for maximum length. </li>
+<li><strong>custom-function : </strong>Call custom function. Value should be name of function </li>
+</ul>
+</p>
+
+
+</div> 
+ 
+  
+  </div>
+</body>
+</html>
