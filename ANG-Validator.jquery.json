@@ -1,0 +1,35 @@
+{
+  "name": "ANG-Validator",
+  "title": "ANG-Validator",
+  "description": "A simplest form validator jquery plugin.",
+  "keywords": [
+    "jquery",
+    "validate",
+    "email",
+    "form",
+    "url",
+    "password",
+    "plugins"
+  ],
+  "version": "0.1.0",
+  "author": {
+    "name": "Anop Goswami",
+    "url": "https://github.com/AnopGoswami"
+  },
+  "maintainers": [
+    {
+      "name": "https://github.com/AnopGoswami",
+      "url": "https://github.com/AnopGoswami"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "download": "https://github.com/AnopGoswami/ANG-Validator/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
