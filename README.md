@@ -7,9 +7,9 @@ A simplest form validator jquery plugin
 <h5>include required files in head tag :=></h5>
 <code>
 &#x3C;script src=&#x22;http://code.jquery.com/jquery-1.11.2.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-<br>
+ /n 
 &#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;angvalidate-1.0.min.js&#x22; &#x3E;&#x3C;/script&#x3E;
-<br>
+ /n 
 &#x3C;link rel=&#x22;Stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;angvalidate.css&#x22; /&#x3E;
 
 </code>
@@ -20,11 +20,11 @@ A simplest form validator jquery plugin
 <h5>initiate plugin using following code :=></h5>
 <code>
 &#x3C;script type=&#x22;text/javascript&#x22;&#x3E;
-  <br> $(document).ready(function(){  <br>   <br> 
+   /n  $(document).ready(function(){   /n     /n  
   
-  $(&#x27;.required&#x27;).angvalidate();   <br>   <br> 
+  $(&#x27;.required&#x27;).angvalidate();    /n     /n  
   
-  });    <br> 
+  });     /n  
   &#x3C;/script&#x3E;
 </code>
 <h5 style="color:#f00;">Note: Here ".required" is the element selector you can use your own</h5>
@@ -50,15 +50,15 @@ A simplest form validator jquery plugin
 <h3>Initialise plugin with custom options :=></h3>
 <code>
  $(&#x27;.required&#x27;).angvalidate({
-        <br><br>error_message        :&#x27;This field is required.&#x27;,      //default error message
-&#x9;&#x9;<br><br>error_message_ext    :&#x27;File type is not valid.&#x27;,      //default file type error message
-&#x9;&#x9;<br><br>error_message_size   :&#x27;File size is not accepted.&#x27;,   //default file size error message
-&#x9;&#x9;<br><br>error_msg_class      :&#x27;error_msg&#x27;,                    //default error message class
-&#x9;&#x9;<br><br>error_input_class    :&#x27;error_input&#x27;,                  //default error input class
-&#x9;&#x9;<br><br>success_input_class  :&#x27;success_input&#x27;,                //default success input class
-&#x9;&#x9;<br><br>allowed_max_size     :1000,                           //default maximum file size in KB
-&#x9;&#x9;<br><br>allowed_extesnsions  :&#x22;jpg,png&#x22;                       //default allowed file extensions
-  <br><br>}); 
+         /n  /n error_message        :&#x27;This field is required.&#x27;,      //default error message
+&#x9;&#x9; /n  /n error_message_ext    :&#x27;File type is not valid.&#x27;,      //default file type error message
+&#x9;&#x9; /n  /n error_message_size   :&#x27;File size is not accepted.&#x27;,   //default file size error message
+&#x9;&#x9; /n  /n error_msg_class      :&#x27;error_msg&#x27;,                    //default error message class
+&#x9;&#x9; /n  /n error_input_class    :&#x27;error_input&#x27;,                  //default error input class
+&#x9;&#x9; /n  /n success_input_class  :&#x27;success_input&#x27;,                //default success input class
+&#x9;&#x9; /n  /n allowed_max_size     :1000,                           //default maximum file size in KB
+&#x9;&#x9; /n  /n allowed_extesnsions  :&#x22;jpg,png&#x22;                       //default allowed file extensions
+   /n  /n }); 
 
 </code>
 </p>
