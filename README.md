@@ -1,71 +1,80 @@
-# ANG-Validator
-A simplest form validator jquery plugin 
+[ANG Validator] - jQuery form validation plugin
+================================
 
-<div>
-<h3> How to Use :=> </h3>
-<p>
-<h5>include required files in head tag :=></h5>
-<code>
-&#x3C;script src=&#x22;http://code.jquery.com/jquery-1.11.2.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
- /n 
-&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;angvalidate-1.0.min.js&#x22; &#x3E;&#x3C;/script&#x3E;
- /n 
-&#x3C;link rel=&#x22;Stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;angvalidate.css&#x22; /&#x3E;
+The jQuery form validation plugin  makes easier to apply validations on html form field. It has many 
+options for different types of validations like url, email, numeric type, file validation etc.
 
-</code>
+It provides easy way to apply custom validation options like inline css. 
 
-</p>
-
-<p>
-<h5>initiate plugin using following code :=></h5>
-<code>
-&#x3C;script type=&#x22;text/javascript&#x22;&#x3E;
-   /n  $(document).ready(function(){   /n     /n  
-  
-  $(&#x27;.required&#x27;).angvalidate();    /n     /n  
-  
-  });     /n  
-  &#x3C;/script&#x3E;
-</code>
-<h5 style="color:#f00;">Note: Here ".required" is the element selector you can use your own</h5>
-</p>
-
-<p>
-<h5>Use html code as below :=></h5>
-<code>
-&#x3C;input  type=&#x22;text&#x22; name=&#x22;sample_text&#x22; class=&#x22;required&#x22;  &#x3E;
-
-</code>
-
-<h5>You can apply custom options as below :=></h5>
-<code>
-&#x3C;input  type=&#x22;file&#x22; name=&#x22;sample_file&#x22; class=&#x22;required&#x22; 
- ang-options=&#x22;display-id:valid_file;allowed-ext:jpg,png;allowed-size:29000;msg:Please Select File;msg-ext:Please Select jpg or png File;msg-size:file size exceed&#x22;&#x3E;
-</code>
-
-</p>
-
+```html
 <hr>
-<p>
-<h3>Initialise plugin with custom options :=></h3>
-<code>
- $(&#x27;.required&#x27;).angvalidate({
-         /n  /n error_message        :&#x27;This field is required.&#x27;,      //default error message
-&#x9;&#x9; /n  /n error_message_ext    :&#x27;File type is not valid.&#x27;,      //default file type error message
-&#x9;&#x9; /n  /n error_message_size   :&#x27;File size is not accepted.&#x27;,   //default file size error message
-&#x9;&#x9; /n  /n error_msg_class      :&#x27;error_msg&#x27;,                    //default error message class
-&#x9;&#x9; /n  /n error_input_class    :&#x27;error_input&#x27;,                  //default error input class
-&#x9;&#x9; /n  /n success_input_class  :&#x27;success_input&#x27;,                //default success input class
-&#x9;&#x9; /n  /n allowed_max_size     :1000,                           //default maximum file size in KB
-&#x9;&#x9; /n  /n allowed_extesnsions  :&#x22;jpg,png&#x22;                       //default allowed file extensions
-   /n  /n }); 
+```
 
-</code>
-</p>
+## Getting Started
 
-<hr>
-<p>
-<h3>Custom Options :=></h3>
+
+### Include required files in head tag :
+
+```html
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> 
+<script type="text/javascript" src="angvalidate-1.0.min.js" ></script> 
+<link rel="Stylesheet" type="text/css" href="angvalidate.css" />
+```
+
+
+### Initiate plugin using following code :
+
+```html
+<script type="text/javascript"> 
+$(document).ready(function(){ 
+
+$('.required').angvalidate(); 
+
+}); 
+</script>
+```
+
+
+#### Note: Here ".required" is the element selector you can use your own
+
+### Use html code as below :
+
+```html
+<input type="text" name="sample_text" class="required" >
+```
+
+### You can apply custom options like inline css as below:
+
+```html
+<input  type="file" name="sample_file" class="required"  ang-options="allowed-ext:jpg,png;allowed-size:29000;msg:Please Select File;msg-ext:Please Select jpg or png File;msg-size:file size exceed">
+```
+
+### You can initialise plugin to override default settings :
+
+```js
+$('.required').angvalidate({ 
+
+error_message :'This field is required.', //default error message 
+
+error_message_ext :'File type is not valid.', //default file type error message 
+
+error_message_size :'File size is not accepted.', //default file size error message 
+
+error_msg_class :'error_msg', //default error message class 
+
+error_input_class :'error_input', //default error input class 
+
+success_input_class :'success_input', //default success input class 
+
+allowed_max_size :1000, //default maximum file size in KB 
+
+allowed_extesnsions :"jpg,png" //default allowed file extensions 
+
+});
+```
+
+### Custom Options :
+```html
 <ul>
 <li><strong>display-id : </strong> Id of element where error message to be displayed.</li>
 <li><strong>msg : </strong> Message to be displayed when error. </li>
@@ -84,7 +93,5 @@ A simplest form validator jquery plugin
 <li><strong>max-length : </strong> Check for maximum length. </li>
 <li><strong>custom-function : </strong>Call custom function. Value should be name of function </li>
 </ul>
-</p>
+```
 
-
-</div> 
