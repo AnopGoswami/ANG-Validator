@@ -1,4 +1,4 @@
-[ANG Validator] - jQuery form validation plugin
+[ANG Validator] - jQuery Form validation plugin
 ================================
 
 The jQuery form validation plugin  makes easier to apply validations on html form field. It has many 
@@ -74,6 +74,7 @@ allowed_extesnsions :"jpg,png" //default allowed file extensions
 ```
 
 ### Custom Options :
+
 ```html
 <ul>
 <li><strong>display-id : </strong> Id of element where error message to be displayed.</li>
