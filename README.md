@@ -1,4 +1,4 @@
-ANG Validator - jQuery Form validation plugin
+ANG Validator - jQuery form validation plugin
 ================================
 
 The jQuery form validation plugin  makes easier to apply validations on html form field. It has many 
@@ -35,7 +35,7 @@ $('.required').angvalidate();
 ```
 
 
-#### Note: Here ".required" is the element selector you can use your own
+<small> Note: Here ".required" is the element selector you can use your own </small>
 
 ### Use html code as below :
 
