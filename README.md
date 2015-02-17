@@ -69,14 +69,14 @@ allowed_extesnsions :"jpg,png" //default allowed file extensions
 
 ### You can apply custom options like inline css as below:
 
-If you want to display error message in perticuar element:-
+If you want to display error message in perticuar element :-
 
 ```html
 <input  type="text" name="sample_txt" class="required"  ang-options="display-id:my_div">
 <div id="my_div"></div>
 ```
 
-If you want to display custom error message in perticuar element:-
+If you want to display custom error message :-
 
 ```html
 <input  type="text" name="sample_txt" class="required"  ang-options="msg:This is my custom error message;">
