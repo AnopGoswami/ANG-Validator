@@ -34,21 +34,6 @@ $('.required').angvalidate();
 </script>
 ```
 
-
-<small> Note: Here ".required" is the element selector you can use your own </small>
-
-### Use html code as below :
-
-```html
-<input type="text" name="sample_text" class="required" >
-```
-
-### You can apply custom options like inline css as below:
-
-```html
-<input  type="file" name="sample_file" class="required"  ang-options="allowed-ext:jpg,png;allowed-size:29000;msg:Please Select File;msg-ext:Please Select jpg or png File;msg-size:file size exceed">
-```
-
 ### You can initialise plugin to override default settings :
 
 ```js
@@ -73,10 +58,54 @@ allowed_extesnsions :"jpg,png" //default allowed file extensions
 });
 ```
 
-### Custom Options :
+
+<small> Note: Here ".required" is the element selector you can use your own </small>
+
+### Use html code as below :
+
+```html
+<input type="text" name="sample_text" class="required" >
+```
+
+### You can apply custom options like inline css as below:
+
+If you want to display error message in perticuar element:-
+
+```html
+<input  type="text" name="sample_txt" class="required"  ang-options="display-id:my_div">
+<div id="my_div"></div>
+```
+
+If you want to display custom error message in perticuar element:-
+
+```html
+<input  type="text" name="sample_txt" class="required"  ang-options="msg:This is my custom error message;">
+```
+
+If you want to apply email validation :-
+
+```html
+<input  type="text" name="sample_txt" class="required"  ang-options="email:true">
+```
+
+If you want to call custom function :-
+
+```html
+<input  type="text" name="sample_txt" class="required"  ang-options="custom-function:my_func;">
+```
+
+If you want to apply file validaton with many options :-
+
+```html
+<input  type="file" name="sample_file" class="required"  ang-options="allowed-ext:jpg,png;allowed-size:29000;msg:Please Select File;msg-ext:Please Select jpg or png File;msg-size:file size exceed">
+```
 
 
-<ul>
+
+### List Of Custom Options :
+
+
+<ul id="ops">
 <li><strong>display-id : </strong> Id of element where error message to be displayed.</li>
 <li><strong>msg : </strong> Message to be displayed when error. </li>
 <li><strong>allowed-size : </strong> Maximum file size to be uploaded in KB for input type file. </li>
