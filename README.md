@@ -53,7 +53,7 @@ success_input_class :'success_input', //default success input class
 
 allowed_max_size :1000, //default maximum file size in KB 
 
-allowed_extesnsions :"jpg,png" //default allowed file extensions 
+allowed_extensions :"jpg,png" //default allowed file extensions 
 
 });
 ```
