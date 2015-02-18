@@ -9,7 +9,8 @@
     "form",
     "url",
     "password",
-    "plugins"
+    "plugins",
+    "jquery-plugin"
   ],
   "version": "0.1.0",
   "author": {
