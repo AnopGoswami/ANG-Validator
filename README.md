@@ -17,7 +17,7 @@ It provides easy way to apply custom validation options like inline css.
 
 ```html
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> 
-<script type="text/javascript" src="angvalidate-1.0.min.js" ></script> 
+<script type="text/javascript" src="angvalidate-0.1.2.min.js" ></script> 
 <link rel="Stylesheet" type="text/css" href="angvalidate.css" />
 ```
 
